@@ -1,0 +1,89 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/fonts";
+
+.list-news {
+  margin-top: 32px;
+
+  &__wrapper {
+  }
+
+  &__list {
+    @include flex;
+    @include flex-wrap;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
+
+  &__item {
+    width: calc(25% - 1rem);
+    height: 420px;
+    margin: 48px 0.5rem 0 0.5rem;
+
+    @include breakpoint-down(large) {
+      width: calc(33% - 1rem);
+    }
+
+    @include breakpoint-down(medium) {
+      width: calc(50% - 1rem);
+    }
+
+    @include breakpoint-down(small) {
+      width: calc(100% - 1rem);
+    }
+
+    &__img-wrapper {
+      margin: 0 auto;
+      width: 305px;
+    }
+
+    &__img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.44rem;
+      text-align: center;
+      color: $primaryColor;
+      width: 305px;
+      margin: 0 auto;
+      padding: 16px 23px 0 23px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 110px;
+    margin-bottom: 280px;
+    .wp-pagenavi {
+      @include flex;
+      @include justify-content(center);
+
+      .previouspostslink,
+      .current,
+      .nextpostslink,
+      .page {
+        width: 24px;
+        height: 24px;
+        border-radius: 3px;
+        background-color: #cccccc;
+        @include flex;
+        @include justify-content(center);
+        @include align-items(center);
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+
+      .previouspostslink,
+      .current,
+      .nextpostslink {
+        background-color: #3f3f3f;
+        color: #ffffff;
+      }
+    }
+  }
+}

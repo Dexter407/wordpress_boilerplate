@@ -1,0 +1,197 @@
+@import "../base/mixins";
+
+.main-footer {
+  padding-top: 160px;
+  padding-bottom: 17px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 113px;
+    background-color: #f4f4f4;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #cecece;
+    @include breakpoint-down(small) {
+      bottom: 220px;
+    }
+  }
+  &__wrapper {
+    @include flex;
+    @include justify-content(space-between);
+    margin-bottom: 47px;
+    @include breakpoint-down(large);
+    @include flex-wrap;
+  }
+
+  &__session {
+    @include breakpoint-down(large) {
+      width: 50%;
+      &:not(:first-child) {
+        padding-top: 20px;
+      }
+      padding-left: 24px;
+    }
+    @include breakpoint-down(small) {
+      width: 100%;
+      &:not(:first-child) {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  &__session__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.16rem;
+    line-height: 1.8rem;
+    color: $primaryColor;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  &__session__list {
+    list-style: none;
+  }
+
+  &__session__item {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $primaryColor;
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__session__link-item {
+    color: $primaryColor;
+  }
+
+  .register-email {
+    width: 269px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e1e1e1;
+    border-radius: 3px;
+    box-shadow: 0 1px #ffffff;
+    @include flex;
+    &__input {
+      border: none;
+      outline: none;
+      height: 100%;
+      flex: 1;
+      padding-left: 5px;
+      font-size: 1.6rem;
+      color: $primaryColor;
+    }
+    &__submit-btn {
+      display: block;
+      width: 38px;
+      height: 38px;
+      background-color: transparent;
+      background-image: url(../images/register-btn.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 11px 10px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__apps {
+    margin-top: 18px;
+    @include flex;
+
+    img {
+      display: block;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__apps__barcode-wrapper {
+    width: 107px;
+  }
+
+  &__apps__barcode-img {
+  }
+
+  &__apps__store {
+    flex: 1;
+    margin-left: 15px;
+    @include flex;
+    @include flex-direction(column);
+  }
+
+  &__apps__apple-link {
+    display: block;
+    width: 127px;
+    margin-bottom: 28px;
+  }
+
+  &__apps__apple-img {
+  }
+
+  &__apps__google-link {
+    display: block;
+    width: 144px;
+  }
+
+  &__apps__google-img {
+  }
+
+  &__session__fan-page {
+    width: 340px;
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__info {
+    @include flex;
+    @include justify-content(space-between);
+    @include breakpoint-down(small) {
+      @include flex-direction(column);
+      @include align-items(center);
+    }
+  }
+
+  &__info_copyright {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    color: #7f7f7f;
+    padding-top: 25.5px;
+
+    @include breakpoint-down(large) {
+      max-width: 360px;
+    }
+  }
+
+  &__info__sale-notification {
+    width: 224px;
+    margin-right: 76px;
+    @include breakpoint-down(small) {
+      margin: 16px auto;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

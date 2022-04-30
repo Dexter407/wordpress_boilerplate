@@ -1,0 +1,119 @@
+:root {
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  // Hack
+  font-size: 62.5%;
+  line-height: 1.44rem;
+  color: $primaryColor;
+  overflow-x: hidden;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  // padding-top: 89px !important;
+  // @media only screen and (max-width: 1199px) {
+  //   padding-top: 89px !important;
+  // }
+  // @media screen and (max-width: 767px) {
+  //   padding-top: 60px !important;
+  // }
+  padding-top: 106px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1322px;
+  padding: 0 16px;
+}
+
+// Visibility
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+.hidden-xs {
+  display: block !important;
+  @media screen and (max-width: 767px) {
+    display: none !important;
+  }
+}
+
+.visible-xs {
+  display: none !important;
+  @media screen and (max-width: 767px) {
+    display: block !important;
+  }
+}
+.re_eff {
+  opacity: 0;
+}
+.eff_actived {
+  opacity: 1 !important;
+}
+
+h1 {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 600;
+  margin-bottom: 16px;
+  @media only screen and (max-width: 767px) {
+    font-size: 28px;
+  }
+}
+h2 {
+  font-size: 35px;
+  line-height: 43px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  @media only screen and (max-width: 767px) {
+    font-size: 26px;
+  }
+}
+h3 {
+  font-size: 20px;
+  line-height: 19px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  @media only screen and (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+h4 {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+h6 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+}

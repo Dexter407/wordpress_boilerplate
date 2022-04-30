@@ -1,0 +1,11 @@
+@import "../base/mixins";
+
+//Colors
+$primaryColor: #333333;
+$mainThemeColor: #cc3694;
+
+//Hamberger Menu
+$hamburger-menu-lines-height: 0.5rem;
+$hamburger-menu-lines-width: 5rem;
+$hamburger-menu-lines-margin: 1rem;
+$offset-for-squeeze: $hamburger-menu-lines-height + $hamburger-menu-lines-margin;
